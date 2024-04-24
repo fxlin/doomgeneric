@@ -5,6 +5,8 @@
 # $Log:$
 #		xzl: based on -sdl makefile
 
+include config.mk
+
 ifeq ($(V),1)
 	VB=''
 else
@@ -22,8 +24,8 @@ CFLAGS+=-Wall -DNORMALUNIX -DLINUX -DSNDSERV -D_DEFAULT_SOURCE # -DUSEASM
 
 # xzl: own newlib
 CFLAGS += -nostdlib -nostdinc -nostartfiles -ffreestanding
-CFLAGS += -I /home/xzl/p1-kernel-next-wsl2/src/current/usr/newlib/newlib/libc/include
-CFLAGS += -I /home/xzl/p1-kernel-next-wsl2/src/current/usr/libminisdl/include/
+CFLAGS += -I $(NEWLIB_INC_PATH)
+CFLAGS += -I $(MINIDSL_PATH)/include
 
 # libgcc (e.g. stddef.h
 CFLAGS += -I /usr/lib/gcc-cross/aarch64-linux-gnu/9/include/
@@ -31,12 +33,12 @@ CFLAGS += -I /usr/lib/gcc-cross/aarch64-linux-gnu/9/include/
 LDFLAGS += -Wl,--gc-sections
 LDFLAGS += -static -T user.ld -nostdlib -nostartfiles -ffreestanding -static
 
-LIBS+=/home/xzl/p1-kernel-next-wsl2/src/current/usr/libminisdl/libminisdl.a
-LIBS+=/home/xzl/p1-kernel-next-wsl2/src/current/usr/libnew.a
+LIBS+=$(MINIDSL_PATH)/libminisdl.a
+LIBS+=$(LIBNEW_PATH)/libnew.a
 LIBS+=-lm -lc
 LIBS+=-lgcc 
 
-LDFLAGS += -L /home/xzl/p1-kernel-next-wsl2/src/current/usr/newlib/build-aarch64
+LDFLAGS += -L $(NEWLIB_BUILD_PATH)
 
 # subdirectory for objects
 OBJDIR=build
