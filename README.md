@@ -1,3 +1,9 @@
+for vos, most changes: 
+- doomgeneric_minisdl.c (minisdl interface)
+- makefile etc
+
+~~~~~ original readme.md below ~~~~~~~~~~~
+
 # doomgeneric
 The purpose of doomgeneric is to make porting Doom easier.
 Of course Doom is already portable but with doomgeneric it is possible with just a few functions.
