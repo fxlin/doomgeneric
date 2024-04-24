@@ -15,7 +15,7 @@
 // DESCRIPTION:
 //	Zone Memory Allocation. Neat.
 //
-
+// xzl: reserve memory via malloc (cf I_ZoneBase()) then manage by itself via zones
 
 #include "z_zone.h"
 #include "i_system.h"

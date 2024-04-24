@@ -613,6 +613,7 @@ static void BuildIWADDirList(void)
 
 #endif
 #else
+    AddIWADDir ("/d");     // xzl
     AddIWADDir (FILES_DIR);
 
     // Don't run this function again.

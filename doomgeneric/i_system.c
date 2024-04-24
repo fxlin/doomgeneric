@@ -91,7 +91,7 @@ void I_Tactile(int on, int off, int total)
 // Zone memory auto-allocation function that allocates the zone size
 // by trying progressively smaller zone sizes until one is found that
 // works.
-
+// xzl: eventually uses malloc() to reserve memory
 static byte *AutoAllocMemory(int *size, int default_ram, int min_ram)
 {
     byte *zonemem;
