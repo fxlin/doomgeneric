@@ -1,8 +1,9 @@
+Apr 2024 xzl
 for vos, most changes: 
 - doomgeneric_minisdl.c (minisdl interface)
 - makefile etc
 
-~~~~~ original readme.md below ~~~~~~~~~~~
+(original readme.md below)
 
 # doomgeneric
 The purpose of doomgeneric is to make porting Doom easier.
