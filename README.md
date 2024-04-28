@@ -1,7 +1,29 @@
 Apr 2024 xzl
+to build, put this dir under $(vos_repo)/usr/
+
+
 for vos, most changes: 
 - doomgeneric_minisdl.c (minisdl interface)
 - makefile etc
+-----------------------------------------
+sdl sound apis used in i_sdlmusic: 
+SDL_Init(SDL_INIT_AUDIO)...
+SDL_QuitSubSystem(SDL_INIT_AUDIO);
+
+SDL_PauseAudio
+SDL_QuitSubSystem
+
+SDL_LockAudio()
+SDL_UnlockAudio()
+
+
+sdl mixer apis
+Mix_SetPanning
+Mix_UnregisterAllEffects
+Mix_PlayChannelTimed
+Mix_Playing
+
+-----------------------------------------
 
 (original readme.md below)
 
